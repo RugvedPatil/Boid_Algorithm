@@ -1,0 +1,75 @@
+*{
+    margin: 5px;
+}
+h1{
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 25px;
+}
+
+h2{
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 25px;
+}
+
+h3{
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 25px;
+}
+
+p{
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 25px;
+}
+
+html { 
+    overflow-y: scroll; 
+}
+body { 
+    margin: 0;
+    background: #000000;
+    overflow: hidden;   
+    position: absolute; 
+}
+
+canvas{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: #222222;
+}
+label{
+    color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 23px;
+}
+
+/* Slider and buttons*/
+.button_main{
+    margin: auto;
+    width: 50%;
+}
+
+.sliderContainer{
+    margin: auto;
+    padding-left: 18%;
+    margin: 0;
+}
+
+.LableSlider{
+    margin: auto;
+    padding-left: 18%;
+    margin: 0;
+}
+
+.slider{
+    height: 2px;
+    margin: 5px;
+} 
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Boids Algorithm</title>
+    <h1 style="color:white">BOIDS ALGORITHM</h1>
+    <script src="./Boids.js"></script>
+    <script src="./sketch.js"></script>
+    <link href="styles.css" type ="text/css" rel="stylesheet" >  
+  </head>
+  <body>
+    <canvas id="boids"></canvas>
+    <div class="button_main">
+      <div class="sliderContainer">
+        <input type="range" min="0" max="200" value="100" id="VR_Slider" class="slider" name="Visula Range"></input>
+        <input type="range" min="0" max="100" value="70" id="Cohesion_Slider" class="slider" name=" Cohesion"></input>
+        <input type="range" min="0" max="100" value="50" id="Seperation_Slider" class="slider" name="Seperation"></input>
+        <input type="range" min="0" max="100" value="50" id="Allignment_Slider" class="slider" name="Allignment"></input>
+      </div>
+      <div class="LableSlider">
+        <label for="VR_Slider">Visula Range</label>
+        <label for="Cohesion_Slider">Cohesion</label>
+        <label for="Seperation_Slider">Seperation</label>
+        <label for="Allignment_Slider">Allignment</label>
+      </div>
+    </div>
+    </div>    
+    <h2>How does it work?</h2>
+    <p>Each of the boids (birds objects) obeys three simple rules:</p>
+    <h3>1. Coherence</h3>
+    <p>Each boid flies towards the the other boids. But they don't just immediately fly directly at each other. They gradually steer towards each other at a rate that you can adjust with the "coherence" slider.</p>
+    <h3>2. Separation</h3>
+    <p>Each boid also tries to avoid running into the other boids. If it gets too close to another boid it will steer away from it. You can control how quickly it steers with the "separation" slider.</p>
+    <h3>3. Alignment</h3>
+    <p>Finally, each boid tries to match the vector (speed and direction) of the other boids around it. Again, you can control how quickly they try to match vectors using the "Allignment" slider.</p>
+    <h3>4. Visual Range</h3>
+    <p>Real animals can't see the entire flock; they can only see the other animals around them. By adjusting the visual range slider, you can adjust how far each boid can "see"—that is which other boids it considers when applying the three rules above.</p>
+  </body>
+</html>
