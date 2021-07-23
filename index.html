@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Boids Algorithm</title>
+    <h1 style="color:white">BOIDS ALGORITHM</h1>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="styles.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" id="boid_canvas">
+            <canvas id="boids" class="img-fluid"></canvas>
+        </div>
+        <div class="row">
+            <div class="sliderContainer row">
+                <div class="col form-group">
+                    <input type="range" class="form-range" id="VR_Slider" min="0" max="100" value="75">
+                    <label for="VR_Slider">Visula Range</label>
+                    <output id="output_VR" style="background-color: aliceblue;"></output>
+                </div>
+                <div class="col form-group">
+                    <input type="range" class="form-range" id="CH_Slider" min="0" max="100" value="70">
+                    <label for="CH_Slider">Cohesion</label>
+                </div>
+                <div class="col form-group">
+                    <input type="range" class="form-range" id="SP_Slider" min="0" max="100" value="50">
+                    <label for="SP_Slider">Separation</label>
+                </div>
+                <div class="col form-group">
+                    <input type="range" class="form-range" id="CO_Slider">
+                    <label for="CO_Slider">Coherence</label>
+                </div>
+            </div>
+        </div>
+        <h2>How does it work?</h2>
+        <p>Each of the boids (birds objects) obeys three simple rules:</p>
+        <h3>1. Coherence</h3>
+        <p>Each boid flies towards the the other boids. But they don't just immediately fly directly at each
+            other. They
+            gradually steer towards each other at a rate that you can adjust with the "coherence" slider.</p>
+        <h3>2. Separation</h3>
+        <p>Each boid also tries to avoid running into the other boids. If it gets too close to another boid it
+            will steer away
+            from it. You can control how quickly it steers with the "separation" slider.</p>
+        <h3>3. Alignment</h3>
+        <p>Finally, each boid tries to match the vector (speed and direction) of the other boids around it.
+            Again, you can
+            control how quickly they try to match vectors using the "Allignment" slider.</p>
+        <h3>4. Visual Range</h3>
+        <p>Real animals can't see the entire flock; they can only see the other animals around them. By
+            adjusting the visual
+            range slider, you can adjust how far each boid can "see"—that is which other boids it considers when
+            applying the
+            three rules above.
+        </p>
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./Boids.js"></script>
+</html>
